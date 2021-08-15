@@ -1,14 +1,17 @@
 import React from 'react';
 import Header from './components/Header/header';
-import Home from './components/Home/home';
+import Routes from './routes';
+import { BrowserRouter } from 'react-router-dom';
 
 
 function App() {
   return (
-    <>
+
+    <BrowserRouter>
       <Header />
-      <Home />
-    </>
+      <Routes />
+    </BrowserRouter>
+
   );
 }
 
