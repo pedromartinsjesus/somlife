@@ -54,7 +54,7 @@ function Header() {
                     >
                         <MenuItem onClick={handleClose}><Link to="/">Home</Link></MenuItem>
                         <MenuItem onClick={handleClose}><Link to="/contacto">Contacto</Link></MenuItem>
-
+                        <MenuItem onClick={handleClose}><Link to="/como_funciona">Como Funciona</Link></MenuItem>
                     </Menu>
                     <Typography variant="h6" className={classes.title}>
                         Estudio Som Life

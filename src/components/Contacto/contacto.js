@@ -7,12 +7,14 @@ import Paper from '@material-ui/core/Paper';
 const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
-        backgroundColor: 'grey',
+        backgroundColor: theme.palette.background.paper,
+
 
     },
-    contacto: {
+    tituloContacto: {
         marginLeft: 10,
         padding: 5,
+        textAlign: 'center',
     },
     telemovelPaper: {
         marginTop: 30,
@@ -22,6 +24,7 @@ const useStyles = makeStyles((theme) => ({
         marginBottom: 50,/* OBS. Coloquei esse margin bottom apenas pra abrir espaço no final da div
                             porque o backgroundColor do root estava pequeno na tela. Foi só pra dar mais
                             espaço de cor na tela.  */
+        width: 110,
     },
     telemovelNumber: {
         fontWeight: "bold",
@@ -45,7 +48,8 @@ const Contacto = () => {
 
                     <Grid item xs={12}>
 
-                        <h3 className={classes.contacto}> Contacto </h3>
+
+                        <h3 aria-label="Contacto" className={classes.tituloContacto}> Contacto </h3>
                         <Paper className={classes.contacto}>
 
                             Envie sua música, ou faça contacto através do número de telemóvel
@@ -54,6 +58,7 @@ const Contacto = () => {
                         <Paper className={classes.telemovelPaper}>
                             <p className={classes.telemovelNumber}>926 429 016</p>
                         </Paper>
+
                     </Grid>
                 </Grid>
             </div>
