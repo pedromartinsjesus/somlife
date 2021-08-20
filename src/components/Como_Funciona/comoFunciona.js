@@ -1,23 +1,24 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
+import Grid from '@material-ui/core/Grid';
 
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        width: '100%',
-
-        backgroundColor: theme.palette.background.paper,
+        flexGrow: 1,
+        /*       backgroundColor: "#cfe0e8", */
     },
     lista: {
         textAlign: 'justify',
-        paddingRight: 10,
-        paddingBottom: 20
+        paddingRight: 20,
+        backgroundColor: "#cfe0e8",
+
     },
     comoFunciona: {
-        marginLeft: 10,
-        marginBottom: 30,
         textAlign: 'center',
+        paddingTop: 10,
+
     },
 }));
 
@@ -30,6 +31,7 @@ const ComoFunciona = () => {
     return (
         <div className={classes.root}>
             <h3 className={classes.comoFunciona}>Como Funciona</h3>
+
 
             <Paper>
                 <ol className={classes.lista}>
@@ -53,6 +55,7 @@ const ComoFunciona = () => {
 
                 </ol>
             </Paper>
+
         </div>
     )
 }

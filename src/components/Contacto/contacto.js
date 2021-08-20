@@ -7,7 +7,7 @@ import Paper from '@material-ui/core/Paper';
 const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
-        backgroundColor: theme.palette.background.paper,
+
 
 
     },
@@ -41,31 +41,29 @@ const Contacto = () => {
     const classes = useStyles();
 
     return (
-        <>
-            <div className={classes.root}>
 
-                <Grid container spacing={1}>
+        <div className={classes.root}>
 
-                    <Grid item xs={12}>
+            <Grid container spacing={1}>
+
+                <Grid item xs={12}>
 
 
-                        <h3 aria-label="Contacto" className={classes.tituloContacto}> Contacto </h3>
-                        <Paper className={classes.contacto}>
+                    <h3 aria-label="Contacto" className={classes.tituloContacto}> Contacto </h3>
+                    <Paper className={classes.contacto}>
 
-                            Envie sua música, ou faça contacto através do número de telemóvel
+                        Envie sua música, ou faça contacto através do número de telemóvel
                       </Paper>
-                        <img className={classes.logoZap} src="/imagens/whatsApp.svg" />
-                        <Paper className={classes.telemovelPaper}>
-                            <p className={classes.telemovelNumber}>926 429 016</p>
-                        </Paper>
+                    <img className={classes.logoZap} src="/imagens/whatsApp.svg" />
+                    <Paper className={classes.telemovelPaper}>
+                        <p className={classes.telemovelNumber}>926 429 016</p>
+                    </Paper>
 
-                    </Grid>
                 </Grid>
-            </div>
-            <div>
+            </Grid>
+        </div>
 
-            </div>
-        </>
+
     )
 }
 
