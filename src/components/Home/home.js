@@ -59,9 +59,13 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-/* const handlePlayer = (e) => {
-    console.log("here");
-} */
+const handlePlayer = (e) => {
+    console.log(e);
+}
+
+const handlePlayer2 = (e) => {
+    console.log(e);
+}
 
 
 const Home = (props) => {
@@ -86,14 +90,14 @@ const Home = (props) => {
                 <Grid item xs={6} sm={3} md={3} lg={3}>
                     <ul>
 
-                        <li className={classes.listItem}>Country
+                        <li onPlay={handlePlayer} className={classes.listItem}>Country
                          <audio preload="none" className={classes.player} controls="controls">
                                 <source src="/musicas/country.mp3" type="audio/mp3"></source>
                                 Your browser does not support the audio element.
                             </audio>
                         </li>
 
-                        <li className={classes.listItem}>Dance
+                        <li onPlay={handlePlayer2} className={classes.listItem}>Dance
                         <audio preload="none" className={classes.player} controls="controls">
                                 <source src="/musicas/dance.mp3" type="audio/mp3"></source>
                             </audio>

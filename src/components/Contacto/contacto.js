@@ -8,30 +8,34 @@ const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
 
-
-
     },
     tituloContacto: {
-        marginLeft: 10,
         padding: 5,
         textAlign: 'center',
     },
     telemovelPaper: {
         marginTop: 30,
-        marginLeft: 30,
-        paddingLeft: 20,
+        marginLeft: 50,
+        paddingLeft: 30,
         padddingTop: 30,
+        paddingRight: 20,
         marginBottom: 50,/* OBS. Coloquei esse margin bottom apenas pra abrir espaço no final da div
                             porque o backgroundColor do root estava pequeno na tela. Foi só pra dar mais
                             espaço de cor na tela.  */
-        width: 110,
+        width: 'max-content',
+        textAlign: 'center',
     },
     telemovelNumber: {
         fontWeight: "bold",
+
     },
     logoZap: {
         marginTop: 23,
+        marginLeft: 30,
         float: 'left',
+    },
+    contactoDescricao: {
+        marginLeft: 30,
     },
 
 }));
@@ -50,13 +54,13 @@ const Contacto = () => {
 
 
                     <h3 aria-label="Contacto" className={classes.tituloContacto}> Contacto </h3>
-                    <Paper className={classes.contacto}>
+                    <Paper className={classes.contactoDescricao}>
 
                         Envie sua música, ou faça contacto através do número de telemóvel
                       </Paper>
                     <img className={classes.logoZap} src="/imagens/whatsApp.svg" />
                     <Paper className={classes.telemovelPaper}>
-                        <p className={classes.telemovelNumber}>926 429 016</p>
+                        <span className={classes.telemovelNumber}>926 429 016</span>
                     </Paper>
 
                 </Grid>
