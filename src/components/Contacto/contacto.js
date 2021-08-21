@@ -58,7 +58,7 @@ const Contacto = () => {
 
                         Envie sua música, ou faça contacto através do número de telemóvel
                       </Paper>
-                    <img className={classes.logoZap} src="/imagens/whatsApp.svg" />
+                    <img alt="Logo WhatsApp" className={classes.logoZap} src="/imagens/whatsApp.svg" />
                     <Paper className={classes.telemovelPaper}>
                         <span className={classes.telemovelNumber}>926 429 016</span>
                     </Paper>
