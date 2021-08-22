@@ -7,17 +7,21 @@ import Paper from '@material-ui/core/Paper';
 const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
-        /*       backgroundColor: "#cfe0e8", */
+        backgroundImage: 'linear-gradient(brown,orange,white)',
+
     },
     lista: {
         textAlign: 'justify',
         paddingRight: 20,
-        backgroundColor: "#cfe0e8",
+        backgroundImage: 'linear-gradient(to right,brown,orange)',
+        color: 'white',
+        paddingBottom: 50
 
     },
     comoFunciona: {
         textAlign: 'center',
         paddingTop: 10,
+        color: 'white',
 
     },
 }));

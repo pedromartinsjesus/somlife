@@ -7,11 +7,14 @@ import Paper from '@material-ui/core/Paper';
 const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
+        backgroundImage: 'linear-gradient(brown,orange,white)',
+        marginTop: 20,
 
     },
     tituloContacto: {
         padding: 5,
         textAlign: 'center',
+        color: 'white',
     },
     telemovelPaper: {
         marginTop: 30,
@@ -24,6 +27,7 @@ const useStyles = makeStyles((theme) => ({
                             espaço de cor na tela.  */
         width: 'max-content',
         textAlign: 'center',
+
     },
     telemovelNumber: {
         fontWeight: "bold",
@@ -36,7 +40,19 @@ const useStyles = makeStyles((theme) => ({
     },
     contactoDescricao: {
         marginLeft: 30,
+        marginRight: 30,
+        textAlign: 'center',
     },
+
+    footerContainer: {
+
+    },
+    footer: {
+        textAlign: 'center',
+        paddingTop: '10%',
+        padding: 10,
+        paddingBottom: 50,
+    }
 
 }));
 
@@ -48,7 +64,7 @@ const Contacto = () => {
 
         <div className={classes.root}>
 
-            <Grid container spacing={1}>
+            <Grid container spacing={2}>
 
                 <Grid item xs={12}>
 
@@ -62,7 +78,6 @@ const Contacto = () => {
                     <Paper className={classes.telemovelPaper}>
                         <span className={classes.telemovelNumber}>926 429 016</span>
                     </Paper>
-
                 </Grid>
             </Grid>
         </div>
