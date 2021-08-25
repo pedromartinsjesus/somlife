@@ -25,6 +25,7 @@ const useStyles = makeStyles((theme) => ({
 
     tituloPlay: {
         textAlign: 'center',
+        paddingTop: 30,
         marginBottom: 20,
         color: 'white',
     },
@@ -114,7 +115,6 @@ const useStyles = makeStyles((theme) => ({
             marginTop: 50,
             marginLeft: 80,
         },
-
     },
 
 
@@ -126,7 +126,7 @@ const Home = (props) => {
 
     const classes = useStyles();
 
-    const { width } = props;
+    /* const { width } = props; */
 
     const [srcPlayer, setsrcPlayer] = useState("oi")
     const [target, setTarget] = useState(null)
@@ -183,7 +183,7 @@ const Home = (props) => {
     return (
         <div className={classes.root}>
             <Grid item xs={12}>
-                <h3 className={classes.home}>Home {width} </h3>
+                <h3 className={classes.home}>{/* Home {width} */} </h3>
                 <h4 className={classes.tituloPlay}>Ouça nossa qualidade sonora</h4>
             </Grid>
 
