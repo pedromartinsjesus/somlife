@@ -5,6 +5,7 @@ import withWidth from '@material-ui/core/withWidth';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
+import Hidden from '@material-ui/core/Hidden';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -24,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
 
     tituloPlay: {
         textAlign: 'center',
-        marginBottom: 40,
+        marginBottom: 20,
         color: 'white',
     },
 
@@ -33,23 +34,21 @@ const useStyles = makeStyles((theme) => ({
     },
     listItem: {
         fontWeight: 'bold',
+        marginLeft: -25,
     },
 
-    [theme.breakpoints.up('lg')]: {
-        player: {
-            marginRight: 200,
-        },
-
-        listItem: {
-
-        },
+    imgProducao: {
+        border: '10px solid rgba(255,255,255,0.3)',
+        boxShadow: '20px 20px 60px 10px pink',
     },
+
     studioImage: {
         width: '100%',
         marginTop: 1,
         boxShadow: '9px 7px 5px rgba(50, 50, 50, 0.77)',
         maxWidth: 500,
     },
+
 
     gifMusica: {
         height: 50,
@@ -73,13 +72,51 @@ const useStyles = makeStyles((theme) => ({
 
     [theme.breakpoints.up('xl')]: {
         player: {
-            marginRight: 300,
+            marginRight: 200,
         },
     },
 
-    test: {
-        backgroundColor: 'black',
+    [theme.breakpoints.up('lg')]: {
+        player: {
+            marginRight: 200,
+
+        },
+        imgProducao: {
+            width: 500,
+        },
+
+        listItem: {
+
+        },
     },
+
+    [theme.breakpoints.up('md')]: {
+        gridImagem: {
+        },
+        tituloPlay: {
+            textAlign: 'left',
+            marginLeft: 100,
+        },
+        imgProducao: {
+            float: 'right',
+            width: 500,
+        },
+    },
+
+    [theme.breakpoints.down('sm')]: {
+
+        tituloPlay: {
+            textAlign: 'left',
+            marginLeft: 100,
+        },
+        imgProducao: {
+            width: 300,
+            marginTop: 50,
+            marginLeft: 80,
+        },
+
+    },
+
 
 }));
 
@@ -147,17 +184,15 @@ const Home = (props) => {
         <div className={classes.root}>
             <Grid item xs={12}>
                 <h3 className={classes.home}>Home {width} </h3>
-
-                <h4 className={classes.tituloPlay}>Aperte o play para ouvir um pouco de nossa qualidade sonora</h4>
+                <h4 className={classes.tituloPlay}>Ouça nossa qualidade sonora</h4>
             </Grid>
 
 
             <Grid container>
-                <Grid item xs={1} sm={3} md={3} lg={3}></Grid>
+                <Grid item xs={1} sm={1} lg={1}></Grid>
 
-                <Grid item xs={6} sm={3} md={3} lg={3}>
+                <Grid item xs={6} sm={4} md={1} lg={3}>
                     <ul>
-
                         <li className={classes.listItem}>Country
                          <audio onPlay={handlePlayer} src={srcPlayer} id={"country"} preload={'none'} className={classes.player} controls="controls">
                                 Your browser does not support the audio element.
@@ -244,7 +279,12 @@ const Home = (props) => {
                         </li>
                     </ul>
                 </Grid>
-                <Grid item xs={1} md={3} lg={3}></Grid>
+                <Hidden xsDown>
+                    <Grid item xs={1} md={8} lg={6} sm={7} className={classes.gridImagem}>
+                        <img alt={"Imagem de produção musical"} className={classes.imgProducao} src="/imagens/producao_musical.jpg" />
+                    </Grid>
+                </Hidden>
+
             </Grid>
 
 
@@ -260,11 +300,12 @@ const Home = (props) => {
             </Grid>
 
             <Grid container>
+
                 <Grid item xs={12} lg={6}>
-
-                    <img className={classes.studioImage} src="/imagens/mix_table.jpg" />
-
+                    <img alt="Imagem de Mesa de mistura" className={classes.studioImage} src="/imagens/mix_table.jpg" />
                 </Grid>
+
+
 
                 <Grid item xs={12} lg={6} className={classes.sideContent}>
 
@@ -272,7 +313,7 @@ const Home = (props) => {
                         Qualidade sonora, produção musical de alto nível
                         < Grid container>
                             <Grid item lg={12}>
-                                <img className={classes.gifMusica} src="https://www.imagensanimadas.com/data/media/1377/nota-musica-imagem-animada-0021.gif" />
+                                <img alt={"Imagem gif animado notas musicais"} className={classes.gifMusica} src="https://www.imagensanimadas.com/data/media/1377/nota-musica-imagem-animada-0021.gif" />
                             </Grid>
                         </Grid>
                     </Typography>

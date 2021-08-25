@@ -10,7 +10,6 @@ import MenuItem from '@material-ui/core/MenuItem';
 import Hidden from '@material-ui/core/Hidden';
 import Grid from '@material-ui/core/Grid';
 import { Link } from 'react-router-dom';
-import ButtonGroup from '@material-ui/core/ButtonGroup';
 import Button from '@material-ui/core/Button';
 
 const useStyles = makeStyles((theme) => ({
@@ -125,7 +124,7 @@ function Header() {
                     </Hidden>
 
                     <Hidden xsDown>  <Typography>
-                        <img className={classes.logo} src={'/imagens/logo.jpg'} />
+                        <img alt="Logo Estudio Som Life" className={classes.logo} src={'/imagens/logo.jpg'} />
                     </Typography>
 
                     </Hidden>
