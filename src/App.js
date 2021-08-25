@@ -9,7 +9,7 @@ import Footer from './components/Footer/footer';
 function App() {
   return (
 
-    <BrowserRouter>
+    <BrowserRouter >
       <Header />
       <Routes />
       <Footer />
