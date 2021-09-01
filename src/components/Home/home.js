@@ -184,7 +184,7 @@ const Home = (props) => {
         <div className={classes.root}>
             <Grid item xs={12}>
                 <h3 className={classes.home}>{/* Home {width} */} </h3>
-                <h4 className={classes.tituloPlay}>Ouça nossa qualidade sonora</h4>
+                <h4 className={classes.tituloPlay}>Oiça nossa qualidade sonora</h4>
             </Grid>
 
 
